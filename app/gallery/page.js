@@ -12,6 +12,8 @@ import {
   ChevronLeft,
   ChevronRight,
   MessageSquare,
+  Video,
+  Play,
 } from "lucide-react";
 
 // Kinetic character/word reveal component
@@ -51,7 +53,7 @@ function AnimatedTextLine({ text, delay = 0, className = "" }) {
   );
 }
 
-// 9 Curated Images (img1-img5 .jpg, img6-img9 .jpeg)
+// 19 Curated Images (img1-img5 .jpg, img6-img19 .jpeg)
 const galleryImages = [
   { id: 1, src: "/img1.jpg", alt: "Woodwork Project 1" },
   { id: 2, src: "/img2.jpg", alt: "Woodwork Project 2" },
@@ -62,6 +64,24 @@ const galleryImages = [
   { id: 7, src: "/img7.jpeg", alt: "Woodwork Project 7" },
   { id: 8, src: "/img8.jpeg", alt: "Woodwork Project 8" },
   { id: 9, src: "/img9.jpeg", alt: "Woodwork Project 9" },
+  { id: 10, src: "/img10.jpeg", alt: "Woodwork Project 10" },
+  { id: 11, src: "/img11.jpeg", alt: "Woodwork Project 11" },
+  { id: 12, src: "/img12.jpeg", alt: "Woodwork Project 12" },
+  { id: 13, src: "/img13.jpeg", alt: "Woodwork Project 13" },
+  { id: 14, src: "/img14.jpeg", alt: "Woodwork Project 14" },
+  { id: 15, src: "/img15.jpeg", alt: "Woodwork Project 15" },
+  { id: 16, src: "/img16.jpeg", alt: "Woodwork Project 16" },
+  { id: 17, src: "/img17.jpeg", alt: "Woodwork Project 17" },
+  { id: 18, src: "/img18.jpeg", alt: "Woodwork Project 18" },
+  { id: 19, src: "/img19.jpeg", alt: "Woodwork Project 19" },
+];
+
+// 4 Workshop & Site Footage Videos (/v1.mov to /v4.mov)
+const galleryVideos = [
+  { id: 1, src: "/v1.mov", title: "Workshop Wood Crafting & Polish in Progress", tag: "Workshop Live" },
+  { id: 2, src: "/v2.mov", title: "Custom Furniture Fitting & Joinery", tag: "Timber Fitting" },
+  { id: 3, src: "/v3.mov", title: "Solid Sheesham & Surface Polishing Work", tag: "Hand Finish" },
+  { id: 4, src: "/v4.mov", title: "Site Installation & Architectural Walkthrough", tag: "Site Installation" },
 ];
 
 export default function GalleryPage() {
@@ -168,7 +188,7 @@ export default function GalleryPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 2: 9 PURE IMAGES GALLERY GRID */}
+      {/* SECTION 2: 19 PURE IMAGES GALLERY GRID */}
       {/* ========================================================================= */}
       <section className="w-full bg-white py-16 sm:py-24 border-b border-neutral-100">
         <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-12">
@@ -193,6 +213,77 @@ export default function GalleryPage() {
                   <div className="w-13 h-13 bg-[#7a3f1b] text-white flex items-center justify-center shadow-2xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
                     <Maximize2 className="w-5 h-5 stroke-[2.2]" />
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 3: 4 WORKSHOP & SITE VIDEOS */}
+      {/* ========================================================================= */}
+      <section className="w-full bg-[#faf7f2] py-16 sm:py-24 border-b border-[#ebdcd0]">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-12">
+          
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#7a3f1b]/10 border border-[#7a3f1b]/30 text-[#8c461d] text-xs font-bold tracking-[0.25em] uppercase mb-4">
+                <Video className="w-3.5 h-3.5 text-[#8c461d]" />
+                <span>WORKSHOP & SITE FOOTAGE</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-[-0.025em]">
+                Live Crafting & Installation Videos
+              </h2>
+            </div>
+            <p className="text-sm sm:text-base text-neutral-600 max-w-md leading-relaxed">
+              Watch authentic workshop footage of our master craftsmen shaping solid Sheesham, fine hand-polishing, and on-site furniture fittings.
+            </p>
+          </div>
+
+          {/* 4 Videos Responsive Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {galleryVideos.map((video) => (
+              <div
+                key={video.id}
+                className="bg-white border border-[#e8ded2] shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col group"
+              >
+                {/* Video Player Container */}
+                <div className="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  >
+                    <source src={video.src} type="video/mp4" />
+                    <source src={video.src} type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                {/* Video Info & WhatsApp Inquire */}
+                <div className="p-6 sm:p-7 flex items-center justify-between gap-4 bg-white border-t border-[#f0e6dc]">
+                  <div className="space-y-1">
+                    <span className="text-[11px] font-bold tracking-widest uppercase text-[#8c461d] bg-[#7a3f1b]/10 px-2.5 py-0.5 inline-block">
+                      {video.tag}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-950 leading-snug">
+                      {video.title}
+                    </h3>
+                  </div>
+
+                  <a
+                    href={`https://wa.me/923261455033?text=Assalam%20o%20Alaikum%20Rana%20Abdullah%20Sahib,%20Maine%20aap%20ki%20website%20gallery%20me%20Video%20${video.id}%20(${video.src})%20dekhi%20hai.%20Mujhe%20is%20ke%20barey%20me%20inquire%20karna%20hai.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 bg-[#7a3f1b] hover:bg-[#623113] text-white p-3.5 transition-colors shadow-md flex items-center justify-center gap-2 group-hover:scale-105 transform duration-300"
+                    title="Inquire about this work on WhatsApp"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             ))}
