@@ -140,20 +140,12 @@ export default function GalleryPage() {
             
             {/* Main Headline */}
             <div className="lg:col-span-8">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[62px] font-bold text-neutral-950 tracking-[-0.025em] leading-[1.08] select-none mb-6">
-                <span className="block">
-                  <AnimatedTextLine text="Curated timber craft & installations." delay={0.1} />
-                </span>
-                <span className="block text-neutral-400">
-                  <AnimatedTextLine text="Showcasing 15+ years across Lahore" delay={0.35} />{" "}
-                  <span className="text-[#8c461d] inline-block">
-                    <AnimatedTextLine text="by Rana Abdullah." delay={0.6} />
-                  </span>
-                </span>
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[72px] font-black text-neutral-950 tracking-[-0.035em] uppercase leading-[0.98] select-none mb-4">
+                <AnimatedTextLine text="PROJECT GALLERY" delay={0.05} />
               </h1>
 
-              <p className="text-neutral-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-                Explore our visual gallery of custom kitchens, solid Sheesham beds, bespoke wardrobes, door fittings, and architectural timber works across Lahore.
+              <p className="text-base sm:text-lg md:text-xl text-neutral-600 font-normal tracking-tight max-w-2xl leading-relaxed">
+                Handcrafted solid timber furniture, modern modular kitchens, and bespoke architectural woodwork across Lahore.
               </p>
             </div>
 
