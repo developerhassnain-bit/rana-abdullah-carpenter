@@ -84,79 +84,55 @@ export default function VisionSection() {
             </div>
 
             {/* Main Title Animated Line-by-Line */}
-            <h2 className="text-3xl sm:text-5xl lg:text-[56px] xl:text-[62px] font-bold text-neutral-950 leading-[1.1] tracking-tight mb-6 sm:mb-8">
-              <div className="overflow-hidden pb-1">
-                <span
-                  className="block transform transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  style={{
-                    transform: isInView ? "translateY(0%)" : "translateY(110%)",
-                    opacity: isInView ? 1 : 0,
-                    transitionDelay: "0.25s",
-                  }}
-                >
-                  We shape &
-                </span>
-              </div>
-              <div className="overflow-hidden pb-1">
-                <span
-                  className="block transform transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  style={{
-                    transform: isInView ? "translateY(0%)" : "translateY(110%)",
-                    opacity: isInView ? 1 : 0,
-                    transitionDelay: "0.38s",
-                  }}
-                >
-                  elevate your space
-                </span>
-              </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-black text-neutral-950 leading-[1.08] tracking-tight mb-4 sm:mb-6 uppercase">
+              We Shape &amp; <br />
+              <span className="text-[#7a3f1b]">Elevate Your Space</span>
             </h2>
 
-            {/* Top Paragraph */}
-            <div
-              className="transform transition-all duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{
-                transform: isInView ? "translateY(0px)" : "translateY(25px)",
-                opacity: isInView ? 1 : 0,
-                transitionDelay: "0.5s",
-              }}
-            >
-              <p className="text-neutral-600 text-base sm:text-lg leading-relaxed font-normal mb-8 sm:mb-10">
-                Transforming Lahore homes and spaces with expert woodwork, fine bespoke furniture, and a promise of timeless beauty and enduring quality for every project we touch.
-              </p>
+            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-normal mb-6">
+              Transforming Lahore residences with precision architectural carpentry, bespoke bedroom suites, and luxury modular kitchen millwork.
+            </p>
+
+            {/* 2 Organized Visual Value Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
+              <div className="bg-[#fcfaf7] border border-[#ebdcd0] p-4 rounded-xl flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#7a3f1b]/10 text-[#7a3f1b] flex items-center justify-center flex-shrink-0 font-bold text-xs">
+                  01
+                </div>
+                <div>
+                  <h4 className="text-xs sm:text-sm font-bold text-neutral-950">Pure Solid Sheesham</h4>
+                  <p className="text-[11px] text-neutral-500 mt-0.5">Kiln-seasoned against weather &amp; moisture</p>
+                </div>
+              </div>
+
+              <div className="bg-[#fcfaf7] border border-[#ebdcd0] p-4 rounded-xl flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#7a3f1b]/10 text-[#7a3f1b] flex items-center justify-center flex-shrink-0 font-bold text-xs">
+                  02
+                </div>
+                <div>
+                  <h4 className="text-xs sm:text-sm font-bold text-neutral-950">Architectural Joinery</h4>
+                  <p className="text-[11px] text-neutral-500 mt-0.5">Laser precision &amp; concealed hardware</p>
+                </div>
+              </div>
             </div>
 
-            {/* Callout Link */}
-            <div
-              className="mb-14 sm:mb-16 transform transition-all duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{
-                transform: isInView ? "translateY(0px)" : "translateY(20px)",
-                opacity: isInView ? 1 : 0,
-                transitionDelay: "0.62s",
-              }}
-            >
-              <Link
-                href="#contact"
-                className="inline-block text-xs sm:text-sm font-extrabold tracking-wider uppercase text-neutral-900 hover:text-[#8c461d] transition-colors border-b-2 border-neutral-900 hover:border-[#8c461d] pb-1"
+            {/* CTA & WhatsApp Button */}
+            <div className="flex items-center gap-3.5 flex-wrap">
+              <a
+                href="https://wa.me/923261455033?text=Assalam%20o%20Alaikum%20Rana%20Abdullah%20Sahib,%20I%20am%20interested%20in%20your%20woodwork%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#231710] hover:bg-[#7a3f1b] text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all shadow hover:shadow-md cursor-pointer"
               >
-                LET&apos;S BUILD SOMETHING LASTING!
+                <span>Let&apos;s Build Something Lasting</span>
+                <span className="text-amber-400">&rarr;</span>
+              </a>
+              <Link
+                href="/gallery"
+                className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-800 hover:text-[#7a3f1b] px-4 py-3.5 transition-colors"
+              >
+                View Portfolio
               </Link>
-            </div>
-
-            {/* Bottom Sub-Feature: Boundless craftsmanship */}
-            <div
-              className="pt-6 sm:pt-8 border-t border-neutral-100 transform transition-all duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{
-                transform: isInView ? "translateY(0px)" : "translateY(25px)",
-                opacity: isInView ? 1 : 0,
-                transitionDelay: "0.75s",
-              }}
-            >
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 mb-3">
-                Boundless craftsmanship
-              </h3>
-              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-                From first sketch to flawless finish, our team brings skill, care, and quality wood seasoning methods to every detail, making every room exceptional.
-              </p>
             </div>
 
           </div>
